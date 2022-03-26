@@ -1,0 +1,111 @@
+/* add fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
+
+/* All class using name dataset */
+:root{
+    /* Define Variables */
+    --accent : #FF0000; /* Button color */
+    --accentHover : #FF9A9A; /* mouse hover */
+    --dark60 : rgba(243, 243, 243, 0.6); /* 0.6 = 60% */
+    --light : #FFFFFF;
+    --transition : all 0.3s ease 0s /* delay time */
+}
+
+/* All section */
+*{
+    /* Clear margin and padding */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%; /* Fixed height using scroll*/
+    overflow: auto;
+}
+
+body{
+    /* Gradient Shade color*/
+    /* background: linear-gradient(
+        var(--dark60), var(--dark60)
+    ),
+    url(./images/dog\ background.jpg); */
+    background-image: url("images/dog background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* fixed scale screen*/
+}
+
+a, button, p{
+    font-family: "Oswald", sans-serif;
+    color: var(--light);
+}
+
+a, button, .logo{
+    cursor: pointer;
+}
+
+main{
+    height: 100;
+    display: grid;
+    grid-template-columns: minmax(60px, 1fr) repeat(6, minmax(50px, 190px))
+    minmax(60px, 1fr); 
+}
+
+header{
+    grid-column: 2 / span 6;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    height: 150px;
+}
+
+.links{
+    margin-left: auto;
+}
+
+.links a, .links button{
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: var(--transition);
+}
+
+.links a:hover{
+    color: var(--accentHover);
+}
+
+.button_med{
+    border: none;
+    background-color: var(--accent);
+    padding: 8px 25px;
+    transition: var(--transition);
+}
+
+.button_med:hover{
+    color: var(--accentHover);
+}
+
+.info{
+    grid-column: 3 / span 4;
+    margin-top: 23%;
+    text-align: center;
+}
+
+.content_font1{
+    font-family: "Oswald", sans-serif;
+    color: black;
+    font-size: 3.5rem;
+}
+
+.content_font2{
+    font-family: "Oswald", sans-serif;
+    color: var(--light);
+    font-size: 1.5rem;
+}
+
+.icons{
+    margin-top: 10%;
+    display: flex;
+}
