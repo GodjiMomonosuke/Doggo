@@ -53,7 +53,13 @@ main{
 }
 
 header{
-    grid-column: 2 / span 6;
+    grid-column: 1 / span 7;
+    margin-left: 5%;
+}
+
+.logo{
+    width: 250px;
+    height: 150px;
 }
 
 nav{
@@ -67,9 +73,10 @@ nav{
 }
 
 .links a, .links button{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 400;
     transition: var(--transition);
+    margin: 10px;
 }
 
 .links a:hover{
@@ -79,7 +86,7 @@ nav{
 .button_med{
     border: none;
     background-color: var(--accent);
-    padding: 8px 25px;
+    padding: 4px 15px;
     transition: var(--transition);
 }
 
@@ -89,23 +96,109 @@ nav{
 
 .info{
     grid-column: 3 / span 4;
-    margin-top: 23%;
+    margin-top: 30%;
     text-align: center;
 }
 
 .content_font1{
     font-family: "Oswald", sans-serif;
     color: black;
-    font-size: 3.5rem;
+    font-size: 5.5rem;
 }
 
 .content_font2{
     font-family: "Oswald", sans-serif;
     color: var(--light);
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .icons{
     margin-top: 10%;
     display: flex;
+    bottom: 0px;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.icon{
+    margin-right: 30px;
+}
+
+.icon img{
+    width: 100px;
+    height: 100px;
+}
+
+.icon_info{
+    text-align: center;
+}
+
+.features{
+    grid-column: 2 / span 7;
+    margin-top: 6%;
+    padding: 30px 0px 0px 20px;
+    display: flex;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    font-size: 30px;
+}
+
+.feature{
+    display: flex;
+    margin: 0px 10px 30px 10px;
+}
+
+.feature img{
+    width: 160px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.feature_info p{
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.feature:hover{
+    color: var(--accentHover);
+}
+
+
+.feature_top, .feature_more{
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width:1100px){
+    .icon img{
+        height: 55px;
+        width: auto;
+    }
+    .content_font1, .content_font2{
+        font-size: 2.5rem;
+    }
+    .feature{
+        grid-column: 1 / span 7;
+    }
+}
+
+@media only screen and (max-width:850px){
+    .info{
+        grid-column: 2 / span 7;
+    }
+    .icons{
+        flex-direction: column;
+    }
+    .content_font1,.content_font2{
+        font-size: 2.5rem;
+    }
+    .features{
+        flex-direction: column;
+    }
 }
